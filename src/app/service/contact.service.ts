@@ -21,10 +21,13 @@ export class ContactService {
   }
 
   getContacts(): Observable<Contact[]> {
-    // return this.http.get(this.url, { headers: this.corsHeaders })
-    //   .pipe(map((response) => response));
+    // return this.http.get(this.url, { headers: this.corsHeaders }).pipe(map((response) => response));
     return this.http.get(this.url_fake, { headers: this.corsHeaders })
-      .pipe(map((response: Contact[]) => response));
+        .pipe(map((response: Contact[]) => response));
   }
+
+    getContact(id: string): Observable<Contact> {
+        return this.http.get(`${this.url_fake}/${id}`).pipe(map((response: Contact) => response));
+    }
 
 }

@@ -7,22 +7,37 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactItemComponent } from './contact-list/contact-item/contact-item.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 import { ContactService } from './service/contact.service';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found.component';
+import { ContactResolver } from './service/contact.resolver';
+import { ContactDetailResolver } from './service/contact-detail.resolver';
+
+const appRoutes: Routes = [
+  { path: 'contacts', component: ContactListComponent, resolve: { contacts: ContactResolver } },
+  { path: 'contacts/:id', component: ContactDetailComponent, resolve: { contact: ContactDetailResolver } },
+  { path: '', redirectTo: '/contacts', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactListComponent,
     ContactItemComponent,
-    ContactDetailComponent
+    ContactDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    ContactService
+    ContactService,
+    ContactResolver,
+    ContactDetailResolver
   ],
   bootstrap: [AppComponent]
 })

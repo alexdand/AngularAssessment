@@ -1,3 +1,21 @@
-<p>
-  contact-detail works!
-</p>
+<span (click)="toggleFavorite()">X</span>
+<div>
+  <img [src]="contact.largeImageURL" [alt]="contact.name">
+</div>
+<p>{{ contact.name }}</p>
+<p>{{ contact.companyName }}</p>
+<hr>
+<p>PHONE:</p>
+<p>{{ contact.phone.home }}</p>
+<p>PHONE:</p>
+<p>{{ contact.phone.mobile }}</p>
+<p>PHONE:</p>
+<p>{{ contact.phone.work }}</p>
+<p>ADDRESS:</p>
+<p>{{ contact.address.street }}</p>
+<p>{{ contact.address.city }}</p>
+<p>{{ contact.address.zipCode }}</p>
+<p>BIRTH DATE:</p>
+<p>{{ contact.birthdate }}</p>
+<p>EMAIL:</p>
+<p>{{ contact.emailAddress }}</p>

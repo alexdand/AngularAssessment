@@ -1,18 +1,16 @@
 <div class="contact-card">
-  <div>
-    <img src="../../../assets/user/user-icon-2x.png" [alt]="contact?.name">
-  </div>
-  <div>
+  <a [routerLink]="['/contacts', contact.id]">
     <div>
-      <span
-        [className]="contact.isFavorite ? 'favorite':'not-favorite'"
-        (click)="toggleFavorite()"
-      >
-      </span>
+      <img src="../../../assets/user/user-icon-2x.png" [alt]="contact?.name">
     </div>
     <div>
-      <span>{{ contact?.name }}</span>
-      <p>{{ contact?.companyName }}</p>
+      <div>
+        <span [className]="contact.isFavorite ? 'favorite':'not-favorite'"></span>
+      </div>
+      <div>
+        <span>{{ contact.name }}</span>
+        <p>{{ contact.companyName }}</p>
+      </div>
     </div>
-  </div>
+  </a>
 </div>

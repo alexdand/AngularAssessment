@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Contact} from '../model/contact.interface';
-import {ContactService} from '../service/contact.service';
+import { Contact } from '../model/contact.interface';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-contact-list',
@@ -12,18 +12,14 @@ export class ContactListComponent implements OnInit {
   favContacts: Contact[];
   otherContacts: Contact[];
 
-  constructor(private contactService: ContactService) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.contactService.getContacts()
-      .subscribe(contacts => {
-        this.otherContacts = contacts
-          .filter(c => !c.isFavorite)
-          .sort((c1, c2) => c1.name > c2.name ? 1 : -1);
-        this.favContacts = contacts
-          .filter(c => c.isFavorite)
-          .sort((c1, c2) => c1.name > c2.name ? 1 : -1);
-      });
+    const allContacts = this.route.snapshot.data.contacts as Array<Contact>;
+    if (allContacts) {
+      this.favContacts = allContacts.filter(c => c.isFavorite).sort((c1, c2) => c1.name > c2.name ? 1 : -1);
+      this.otherContacts = allContacts.filter(c => !c.isFavorite).sort((c1, c2) => c1.name > c2.name ? 1 : -1);
+    }
   }
 
 }

@@ -1,7 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Contact} from '../../model/contact.interface';
-import {Phone} from '../../model/phone.interface';
-import {Address} from '../../model/address.interface';
+import { Component, Input, OnInit } from '@angular/core';
+import { Contact } from '../../model/contact.interface';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-contact-item',
@@ -13,12 +12,9 @@ export class ContactItemComponent implements OnInit {
   @Input()
   contact: Contact;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {}
-
-  toggleFavorite() {
-    this.contact.isFavorite = !this.contact.isFavorite;
+  ngOnInit() {
   }
 
 }
