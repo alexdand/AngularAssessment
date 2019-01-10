@@ -1,0 +1,18 @@
+<div class="contact-card">
+  <div>
+    <img src="../../../assets/user/user-icon-2x.png" [alt]="contact?.name">
+  </div>
+  <div>
+    <div>
+      <span
+        [className]="contact.isFavorite ? 'favorite':'not-favorite'"
+        (click)="toggleFavorite()"
+      >
+      </span>
+    </div>
+    <div>
+      <span>{{ contact?.name }}</span>
+      <p>{{ contact?.companyName }}</p>
+    </div>
+  </div>
+</div>

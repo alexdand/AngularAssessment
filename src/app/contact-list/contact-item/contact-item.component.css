@@ -1,0 +1,23 @@
+.contact-card {
+  border-bottom: 1px solid lightgray;
+  padding: 1em;
+}
+
+.contact-card:hover {
+
+}
+
+span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.favorite {
+  background: url('../../../assets/star/favorite-true.png') no-repeat;
+}
+
+.not-favorite {
+  background: url('../../../assets/star/favorite-false.png') no-repeat;
+}
