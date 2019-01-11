@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { ContactResolver } from './service/contact.resolver';
 import { ContactDetailResolver } from './service/contact-detail.resolver';
+import { ContactInfoComponent } from './contact-list/contact-item/contact-info/contact-info.component';
 
 const appRoutes: Routes = [
   { path: 'contacts', component: ContactListComponent, resolve: { contacts: ContactResolver } },
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     ContactListComponent,
     ContactItemComponent,
     ContactDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ContactInfoComponent
   ],
   imports: [
     BrowserModule,

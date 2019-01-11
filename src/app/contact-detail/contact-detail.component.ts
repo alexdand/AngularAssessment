@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit} from '@angular/core';
 import {ActivatedRoute } from '@angular/router';
 import {Contact} from '../model/contact.interface';
+import {ContactService} from '../service/contact.service';
 
 @Component({
   selector: 'app-contact-detail',
@@ -10,16 +11,15 @@ import {Contact} from '../model/contact.interface';
 export class ContactDetailComponent implements OnInit {
 
   contact: Contact;
-  favoriteToggle = new EventEmitter<boolean>();
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private contactService: ContactService) {}
 
   ngOnInit() {
     this.contact = this.route.snapshot.data.contact as Contact;
   }
 
-  toggleFavorite() {
-    this.favoriteToggle.emit(!this.contact.isFavorite);
+  toggleFavorite(): void {
+    this.contactService.toggleFavorite(this.contact.id, this.contact, !this.contact.isFavorite);
   }
 
 }

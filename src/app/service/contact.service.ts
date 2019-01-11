@@ -1,16 +1,18 @@
-import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { EventEmitter, Injectable, Output } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Contact } from '../model/contact.interface';
 import { Observable } from 'rxjs';
-import {map} from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class ContactService {
 
-  url = 'https://s3.amazonaws.com/technical-challenge/v3/contacts.json';
+  // url = 'https://s3.amazonaws.com/technical-challenge/v3/contacts.json';
   url_fake = 'http://localhost:3000/contacts';
 
   private corsHeaders: HttpHeaders;
+  @Output()
+  eventEmitter = new EventEmitter();
 
   constructor(private http: HttpClient) {
     this.corsHeaders = new HttpHeaders({
@@ -21,13 +23,23 @@ export class ContactService {
   }
 
   getContacts(): Observable<Contact[]> {
-    // return this.http.get(this.url, { headers: this.corsHeaders }).pipe(map((response) => response));
-    return this.http.get(this.url_fake, { headers: this.corsHeaders })
-        .pipe(map((response: Contact[]) => response));
+    return this.http
+      .get(this.url_fake, { headers: this.corsHeaders })
+      .pipe(map((response: Contact[]) => response));
   }
 
-    getContact(id: string): Observable<Contact> {
-        return this.http.get(`${this.url_fake}/${id}`).pipe(map((response: Contact) => response));
-    }
+  getContact(id: string): Observable<Contact> {
+    return this.http
+      .get(`${this.url_fake}/${id}`)
+      .pipe(map((response: Contact) => response));
+  }
+
+  toggleFavorite(id: number, contactToUpdate: Contact, isFavorite: boolean) {
+    this.http.put(`${this.url_fake}/${id}`, {
+      ...contactToUpdate,
+      isFavorite
+    });
+    this.eventEmitter.emit(contactToUpdate);
+  }
 
 }

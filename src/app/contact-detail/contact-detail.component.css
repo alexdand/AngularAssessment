@@ -28,21 +28,32 @@
 }
 .name {
     font-size: 1.6em;
+    padding: 0.4em 0;
 }
-.info-list {
-
-}
-.info-item:nth-child(1) {
-    padding: 0 1em 1em 1em;
+.company {
+    letter-spacing: 0.1em;
+    color: gray;
 }
 .info-item {
-    padding: 1em;
+    padding: 1.5em 1em;
     border-bottom: 1px solid lightgray;
 }
 .title {
     color: gray;
     text-transform: uppercase;
-    font-size: 1.1em;
+    font-size: 0.9em;
+}
+.info {
+    font-weight: bold;
+    padding-top: .5em;
+}
+.phone-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.phone-info p:nth-child(2) {
+    color: gray;
 }
 span {
     width: 20px;
