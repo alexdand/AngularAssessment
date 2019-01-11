@@ -365,7 +365,7 @@
       "id": "5",
       "name": "Hermione Granger",
       "companyName": "Gryffindor",
-      "isFavorite": true,
+      "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/hermione-granger-small.jpg",
       "largeImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/hermione-granger-large.jpg",
       "emailAddress": "Hermione.Granger@gryffindor.com",

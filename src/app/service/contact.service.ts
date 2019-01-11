@@ -11,8 +11,6 @@ export class ContactService {
   url_fake = 'http://localhost:3000/contacts';
 
   private corsHeaders: HttpHeaders;
-  @Output()
-  eventEmitter = new EventEmitter();
 
   constructor(private http: HttpClient) {
     this.corsHeaders = new HttpHeaders({
@@ -40,7 +38,6 @@ export class ContactService {
     this.http.put(`${this.url_fake}/${id}`, contact, {
       headers: this.corsHeaders,
     }).subscribe(response => {});
-    this.eventEmitter.emit(contact);
   }
 
 }

@@ -21,7 +21,6 @@ export class ContactListComponent implements OnInit {
       this.favContacts = allContacts.filter(c => c.isFavorite).sort((c1, c2) => c1.name > c2.name ? 1 : -1);
       this.otherContacts = allContacts.filter(c => !c.isFavorite).sort((c1, c2) => c1.name > c2.name ? 1 : -1);
     }
-    this.contactService.eventEmitter.subscribe((contact: Contact) => console.log(contact));
   }
 
 }
