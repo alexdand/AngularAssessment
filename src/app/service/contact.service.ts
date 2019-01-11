@@ -36,9 +36,10 @@ export class ContactService {
 
   toggleFavorite(id: number, contactToUpdate: Contact) {
     const contact = Object.assign({}, { ...contactToUpdate, isFavorite: !contactToUpdate.isFavorite });
-    this.http.put(`http://localhost:3000/contact/${id}`, contact, {
+    console.log('ID: ', id);
+    this.http.put(`${this.url_fake}/${id}`, contact, {
       headers: this.corsHeaders,
-    });
+    }).subscribe(response => {});
     this.eventEmitter.emit(contact);
   }
 

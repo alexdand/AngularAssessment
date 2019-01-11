@@ -1,8 +1,8 @@
 {
   "contacts": [
     {
-      "name": "Miss Piggy",
       "id": "13",
+      "name": "Miss Piggy",
       "companyName": "Muppets, Baby",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/miss-piggy-small.jpg",
@@ -23,8 +23,8 @@
       }
     },
     {
-      "name": "Winnie-the-Pooh",
       "id": "19",
+      "name": "Winnie-the-Pooh",
       "companyName": "Honey Bear, Inc",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/winnie-the-pooh-small.jpg",
@@ -43,8 +43,8 @@
       }
     },
     {
-      "name": "Charlie Brown",
       "id": "1",
+      "name": "Charlie Brown",
       "companyName": "Peanuts",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/charlie-brown-small.jpg",
@@ -65,8 +65,8 @@
       }
     },
     {
-      "name": "Pink Ranger",
       "id": "15",
+      "name": "Pink Ranger",
       "companyName": "Power Rangers",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/pink-ranger-small.jpg",
@@ -87,8 +87,8 @@
       }
     },
     {
-      "name": "Elmer Fudd",
       "id": "3",
+      "name": "Elmer Fudd",
       "companyName": "",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/elmer-fudd-small.jpg",
@@ -108,10 +108,10 @@
       }
     },
     {
-      "name": "Harry Potter",
       "id": "4",
+      "name": "Harry Potter",
       "companyName": null,
-      "isFavorite": true,
+      "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/harry-potter-small.jpg",
       "largeImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/harry-potter-large.jpg",
       "emailAddress": "Harry.Potter@gryffindor.edu",
@@ -129,8 +129,8 @@
       }
     },
     {
-      "name": "Homer Simpson",
       "id": "6",
+      "name": "Homer Simpson",
       "companyName": "Springfield Nuclear Power Plant",
       "isFavorite": true,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/homer-simpson-small.jpg",
@@ -151,8 +151,8 @@
       }
     },
     {
-      "name": "Jack Skellington",
       "id": "12",
+      "name": "Jack Skellington",
       "companyName": "Halloween Town",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/jack-skellington-small.jpg",
@@ -172,8 +172,8 @@
       }
     },
     {
-      "name": "Bugs Bunny",
       "id": "0",
+      "name": "Bugs Bunny",
       "companyName": "Looney Tunes",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/bugs-bunny-small.png",
@@ -192,8 +192,8 @@
       }
     },
     {
-      "name": "JP Sullivan",
       "id": "8",
+      "name": "JP Sullivan",
       "companyName": "Monsters Inc",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/jp-sullivan-small.jpg",
@@ -214,8 +214,8 @@
       }
     },
     {
-      "name": "Kermit the Frog",
       "id": "9",
+      "name": "Kermit the Frog",
       "companyName": "Muppets, Baby",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/kermit-the-frog-small.jpg",
@@ -236,8 +236,8 @@
       }
     },
     {
-      "name": "Leia Skywalker",
       "id": "10",
+      "name": "Leia Skywalker",
       "companyName": "Rebel Alliance",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/leia-skywalker-small.jpeg",
@@ -258,8 +258,8 @@
       }
     },
     {
-      "name": "Lucy Van Pelt",
       "id": "11",
+      "name": "Lucy Van Pelt",
       "companyName": "Peanuts",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/lucy-van-pelt-small.jpg",
@@ -280,8 +280,8 @@
       }
     },
     {
-      "name": "Nemo",
       "id": "14",
+      "name": "Nemo",
       "companyName": "Unemployed",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/nemo-small.jpeg",
@@ -302,8 +302,8 @@
       }
     },
     {
-      "name": "Daffy Duck",
       "id": "2",
+      "name": "Daffy Duck",
       "companyName": "Acme Looniversity",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/daffy-duck-small.jpg",
@@ -323,8 +323,8 @@
       }
     },
     {
-      "name": "Roger Rabbit",
       "id": "16",
+      "name": "Roger Rabbit",
       "isFavorite": true,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/roger-rabbit-small.jpg",
       "largeImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/roger-rabbit-large.jpg",
@@ -342,8 +342,8 @@
       }
     },
     {
-      "name": "Scooby Doo",
       "id": "17",
+      "name": "Scooby Doo",
       "companyName": "Mystery Incorporated",
       "isFavorite": false,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/scooby-doo-small.jpeg",
@@ -362,8 +362,8 @@
       }
     },
     {
-      "name": "Hermione Granger",
       "id": "5",
+      "name": "Hermione Granger",
       "companyName": "Gryffindor",
       "isFavorite": true,
       "smallImageURL": "https://s3.amazonaws.com/technical-challenge/v3/images/hermione-granger-small.jpg",
