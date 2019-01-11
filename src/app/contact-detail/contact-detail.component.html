@@ -1,7 +1,7 @@
 <div class="container">
   <div class="top">
     <a routerLink="/contacts"> < Contacts </a>
-    <span [className]="contact.isFavorite ? 'favorite':'not-favorite'" (click)="toggleFavorite()"></span>
+    <span #favorite [className]="contact.isFavorite ? 'favorite':'not-favorite'" (click)="toggleFavorite(favorite)"></span>
   </div>
   <div class="mid">
     <img [src]="contact.smallImageURL" [alt]="contact.name">

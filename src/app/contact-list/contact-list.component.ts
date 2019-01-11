@@ -8,7 +8,7 @@ import {ContactService} from '../service/contact.service';
   templateUrl: './contact-list.component.html',
   styleUrls: ['./contact-list.component.css']
 })
-export class ContactListComponent implements OnInit, OnChanges {
+export class ContactListComponent implements OnInit {
 
   favContacts: Contact[];
   otherContacts: Contact[];
@@ -21,13 +21,7 @@ export class ContactListComponent implements OnInit, OnChanges {
       this.favContacts = allContacts.filter(c => c.isFavorite).sort((c1, c2) => c1.name > c2.name ? 1 : -1);
       this.otherContacts = allContacts.filter(c => !c.isFavorite).sort((c1, c2) => c1.name > c2.name ? 1 : -1);
     }
-    this.contactService.eventEmitter.subscribe((updated: Contact) => {
-      console.log(updated);
-    });
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('something changed');
+    this.contactService.eventEmitter.subscribe((contact: Contact) => console.log(contact));
   }
 
 }

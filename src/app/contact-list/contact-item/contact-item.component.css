@@ -20,6 +20,8 @@ a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  min-height: 150px;
+  height: 240px;
 }
 .hover-effect:hover .content {
   opacity: 0.8;
@@ -31,7 +33,9 @@ a {
 }
 .image {
   /*border: 1px solid blue;*/
+  background: url('../../../assets/user/user-icon-3x.png') center no-repeat;
   width: 33%;
+  min-width: 100px;
 }
 .info {
   /*border: 1px solid red;*/
@@ -43,6 +47,7 @@ a {
 }
 .top {
   width: 20%;
+  align-items: center;
 }
 .name {
   font-size: 1.4em;
@@ -63,7 +68,58 @@ a {
 }
 .favorite {
   background: url('../../../assets/star/favorite-true-2x.png') no-repeat;
+  display: flex;
 }
 .not-favorite {
   background: url('../../../assets/star/favorite-false-2x.png') no-repeat;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .content {
+    padding: 0 1em;
+    height: 150px;
+  }
+  .image {
+    background: url('../../../assets/user/user-icon-2x.png') center no-repeat;
+    width: 20%;
+  }
+  .top {
+    padding: .5em;
+  }
+  .name {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  .company {
+    font-size: 1em;
+    color: gray;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .content {
+    padding: 0 1em;
+    height: 150px;
+  }
+  #star {
+    height: 20px;
+  }
+  .image {
+    background: url('../../../assets/user/user-icon.png') center no-repeat;
+    width: 20%;
+  }
+  .favorite {
+    background: url('../../../assets/star/favorite-true.png') no-repeat;
+  }
+  .not-favorite {
+    background: url('../../../assets/star/favorite-false.png') no-repeat;
+  }
+  .name {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .company {
+    font-size: 0.9em;
+    color: gray;
+  }
 }

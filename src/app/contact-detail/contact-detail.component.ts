@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute } from '@angular/router';
 import {Contact} from '../model/contact.interface';
 import {ContactService} from '../service/contact.service';
@@ -18,8 +18,10 @@ export class ContactDetailComponent implements OnInit {
     this.contact = this.route.snapshot.data.contact as Contact;
   }
 
-  toggleFavorite(): void {
-    this.contactService.toggleFavorite(this.contact.id, this.contact, !this.contact.isFavorite);
+  toggleFavorite(element: any): void {
+    element.classList.toggle('favorite');
+    element.classList.toggle('not-favorite');
+    this.contactService.toggleFavorite(this.contact.id, this.contact);
   }
 
 }

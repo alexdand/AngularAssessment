@@ -2,9 +2,7 @@
   <div class="hover-effect">
     <a [routerLink]="['/contacts', contact.id]">
       <div class="content">
-        <div class="image">
-          <img src="../../../assets/user/user-icon-2x.png" [alt]="contact?.name">
-        </div>
+        <div class="image"></div>
         <div class="info">
           <div class="top">
             <span id="star" [className]="contact.isFavorite ? 'favorite':'not-favorite'"></span>
