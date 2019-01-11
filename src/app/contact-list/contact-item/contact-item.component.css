@@ -1,23 +1,69 @@
 .contact-card {
   border-bottom: 1px solid lightgray;
-  padding: 1em;
+  display: flex;
 }
-
-.contact-card:hover {
-
+.hover-effect {
+  width: 100%;
+  background-color: #26b3ee;
 }
-
-span {
-  width: 20px;
-  height: 20px;
+a {
+  text-decoration: none;
+  color: black;
+}
+.content {
+  padding: 2em 2.5em;
+  z-index: 1;
+  opacity: 1;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.hover-effect:hover .content {
+  opacity: 0.8;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -ms-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+.image {
+  /*border: 1px solid blue;*/
+  width: 33%;
+}
+.info {
+  /*border: 1px solid red;*/
+  width: 66%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5em;
+}
+.top {
+  width: 20%;
+}
+.name {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.company {
+  font-size: 1.1em;
+  color: gray;
+}
+.bot {
+  width: 80%;
+}
+#star {
+  width: 40px;
+  height: 40px;
   display: inline-block;
   cursor: pointer;
 }
-
 .favorite {
-  background: url('../../../assets/star/favorite-true.png') no-repeat;
+  background: url('../../../assets/star/favorite-true-2x.png') no-repeat;
 }
-
 .not-favorite {
-  background: url('../../../assets/star/favorite-false.png') no-repeat;
+  background: url('../../../assets/star/favorite-false-2x.png') no-repeat;
 }

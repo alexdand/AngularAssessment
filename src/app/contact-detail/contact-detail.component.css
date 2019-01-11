@@ -1,0 +1,60 @@
+.container {
+    width: 70%;
+    margin: 0 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.top {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    justify-content: space-between;
+    min-height: 50px;
+    height: 10%;
+    align-items: center;
+}
+.top a {
+    color: dodgerblue;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+.mid {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid lightgray;
+}
+.name {
+    font-size: 1.6em;
+}
+.info-list {
+
+}
+.info-item:nth-child(1) {
+    padding: 0 1em 1em 1em;
+}
+.info-item {
+    padding: 1em;
+    border-bottom: 1px solid lightgray;
+}
+.title {
+    color: gray;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.favorite {
+    background: url('../../assets/star/favorite-true.png') no-repeat;
+}
+
+.not-favorite {
+    background: url('../../assets/star/favorite-false.png') no-repeat;
+}

@@ -1,21 +1,40 @@
-<span (click)="toggleFavorite()">X</span>
-<div>
-  <img [src]="contact.largeImageURL" [alt]="contact.name">
+<div class="container">
+  <div class="top">
+    <a routerLink="/contacts"> < Contacts </a>
+    <span [className]="contact.isFavorite ? 'favorite':'not-favorite'"></span>
+  </div>
+  <div class="mid">
+    <img [src]="contact.largeImageURL" [alt]="contact.name">
+    <h3 class="name">{{ contact.name }}</h3>
+    <p>{{ contact.companyName }}</p>
+  </div>
+  <hr>
+  <div class="info-list">
+    <div class="info-item" *ngIf="contact.phone.home">
+      <p class="title">PHONE:</p>
+      <p>{{ contact.phone.home }}</p>
+    </div>
+    <div class="info-item" *ngIf="contact.phone.mobile">
+      <p class="title">PHONE:</p>
+      <p>{{ contact.phone.mobile }}</p>
+    </div>
+    <div class="info-item" *ngIf="contact.phone.work">
+      <p class="title">PHONE:</p>
+      <p>{{ contact.phone.work }}</p>
+    </div>
+    <div class="info-item" *ngIf="contact.address">
+      <p class="title">ADDRESS:</p>
+      <p>{{ contact.address.street }}</p>
+      <p>{{ contact.address.city }}</p>
+      <p>{{ contact.address.zipCode }}</p>
+    </div>
+    <div class="info-item" *ngIf="contact.birthdate">
+      <p class="title">BIRTH DATE:</p>
+      <p>{{ contact.birthdate | date:'longDate' }}</p>
+    </div>
+    <div class="info-item" *ngIf="contact.emailAddress">
+      <p class="title">EMAIL:</p>
+      <p>{{ contact.emailAddress }}</p>
+    </div>
+  </div>
 </div>
-<p>{{ contact.name }}</p>
-<p>{{ contact.companyName }}</p>
-<hr>
-<p>PHONE:</p>
-<p>{{ contact.phone.home }}</p>
-<p>PHONE:</p>
-<p>{{ contact.phone.mobile }}</p>
-<p>PHONE:</p>
-<p>{{ contact.phone.work }}</p>
-<p>ADDRESS:</p>
-<p>{{ contact.address.street }}</p>
-<p>{{ contact.address.city }}</p>
-<p>{{ contact.address.zipCode }}</p>
-<p>BIRTH DATE:</p>
-<p>{{ contact.birthdate }}</p>
-<p>EMAIL:</p>
-<p>{{ contact.emailAddress }}</p>

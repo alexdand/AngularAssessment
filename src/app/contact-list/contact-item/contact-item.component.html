@@ -1,16 +1,20 @@
 <div class="contact-card">
-  <a [routerLink]="['/contacts', contact.id]">
-    <div>
-      <img src="../../../assets/user/user-icon-2x.png" [alt]="contact?.name">
-    </div>
-    <div>
-      <div>
-        <span [className]="contact.isFavorite ? 'favorite':'not-favorite'"></span>
+  <div class="hover-effect">
+    <a [routerLink]="['/contacts', contact.id]">
+      <div class="content">
+        <div class="image">
+          <img src="../../../assets/user/user-icon-2x.png" [alt]="contact?.name">
+        </div>
+        <div class="info">
+          <div class="top">
+            <span id="star" [className]="contact.isFavorite ? 'favorite':'not-favorite'"></span>
+          </div>
+          <div class="bot">
+            <p class="name">{{ contact.name }}</p>
+            <p class="company">{{ contact.companyName }}</p>
+          </div>
+        </div>
       </div>
-      <div>
-        <span>{{ contact.name }}</span>
-        <p>{{ contact.companyName }}</p>
-      </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </div>
